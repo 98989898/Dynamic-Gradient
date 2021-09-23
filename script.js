@@ -21,6 +21,10 @@ function updateColor() {
 }
 
 function randomColors() {
-	body.style.background = "linear-gradient(to right, #" + Math.floor(Math.random()*0x1000000).toString(16) + ", #" + Math.floor(Math.random()*0x1000000).toString(16) + ")";
+	randColor1 = "#" +  Math.floor(Math.random()*0x1000000).toString(16);
+	randColor2 = "#" + Math.floor(Math.random()*0x1000000).toString(16);
+	body.style.background = "linear-gradient(to right, " + randColor1 + ", " + randColor2 + ")";
+	color1.value = randColor1;
+	color2.value = randColor2;
 	description.textContent = body.style.background;
 }
